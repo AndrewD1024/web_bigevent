@@ -73,14 +73,14 @@ $(function () {
             success: function (res) {
                 if (res.status != 0) {
                     return layer.msg('登录失败');
-                } else {
-                    layer.msg('登录成功！');
-                    // console.log(res.token);
-                    // 将登录成功得到的token字符串存到localStorage中。
-                    localStorage.setItem('token', res.token);
-                    // 跳转到后台主页
-                    location.href = '/index.html';
                 }
+                layer.msg('登录成功！');
+                // console.log(res.token);
+                // 将登录成功得到的token字符串存到localStorage中。
+                localStorage.setItem('token', res.token);
+                // 跳转到后台主页
+                location.href = '/index.html';
+
             }
 
         })
